@@ -1,0 +1,171 @@
+#sidebar {
+	width:200;
+	height: 100vh;
+	background-color: lightgray;
+	opacity: 0.8;
+	border-radius:10px ;
+	box-shadow:0;
+	padding: 20px;
+	font-family: Arial, initial;
+	font-size: 14px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	color: #333;
+}
+#sidebar ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#sidebar li{
+	display: inline-grid;
+	padding: 50px;
+	margin-bottom: 10px;
+}
+
+#sidebar a{
+	text-decoration: none;
+	color: #337ab7;
+	transition: color 0.2 ease;
+}
+#sidebar a:hover{
+	color: #23527c;
+}
+#sidebar i{
+	margin-right: 10px;
+}
+
+
+.slideshow{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	pointer-events: none;
+
+}
+
+.slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	animation: slideshow 10s infinite alternate;
+}
+
+@keyframes slideshow{
+	0%{
+		opacity: 0;
+	}
+	10%{
+		opacity: 1;
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+.slide:nth-child(1){
+	animation-delay:0s ;
+}
+.slide:nth-child(2){
+	animation-delay:7s ;
+}
+.slide:nth-child(3){
+	animation-delay:12s ;
+}
+.slide:nth-child(4){
+	animation-delay:17s ;
+}
+.slide:nth-child(5){
+	animation-delay:22s 
+}
+
+#search {
+	position: fixed;
+	top: 50px;
+	left: 700px;
+	display: flex;
+	justify-content: center;
+	z-index: 1000;
+	
+
+}
+
+#search-button{
+	position: fixed;
+	top: 50px;
+	left: 880px;
+	display: flex;
+	justify-content: center;
+	z-index: 1000;
+}
+
+#search-button:hover{
+	background-color: #0069d9;
+	cursor: pointer;
+}
+
+#blog {
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-width: 400px;
+	margin: 40px auto;
+	z-index: 1;
+	mix-blend-mode: difference;
+	color: goldenrod;
+}
+
+#blog h2{
+	text-align: center;
+}
+
+.blog-posts{
+	display: flex;
+	flex-wrap:wrap ;
+	justify-content: center;
+}
+
+#article {
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid  #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#article h3 {
+	margin-top: 0;
+}
+
+#article time {
+	font-size: 0.8em;
+	color: #666;
+}
+
+#video-background {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+#video-background video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
